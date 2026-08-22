@@ -1,7 +1,3 @@
-output "bedrockagentcore_registries_id" {
-  description = "Map of id values across all bedrockagentcore_registries, keyed the same as var.bedrockagentcore_registries"
-  value       = { for k, v in aws_bedrockagentcore_registry.bedrockagentcore_registries : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "bedrockagentcore_registries_approval_configuration" {
   description = "Map of approval_configuration values across all bedrockagentcore_registries, keyed the same as var.bedrockagentcore_registries"
   value       = { for k, v in aws_bedrockagentcore_registry.bedrockagentcore_registries : k => v.approval_configuration if v.approval_configuration != null && length(v.approval_configuration) > 0 }
